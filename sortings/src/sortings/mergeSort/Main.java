@@ -9,6 +9,7 @@ public class Main {
 		Random rand = new Random();
 		int[] numbers = new int[100000000];
 		
+		// Initializing a very large array with random numbers 
 		for(int i = 0; i < numbers.length; i++)
 		{
 			numbers[i] = rand.nextInt(1000000);
@@ -16,7 +17,9 @@ public class Main {
 		
 		System.out.println("Starting the sorting of " + numbers.length + " elements:");
 		System.out.println("...");
+		// Printing the elements of the list
 		//printArray(numbers);
+		// Verifying if the array is sorted or not
 		//System.out.println(isSorted(numbers));		
 		
 		long start = System.currentTimeMillis();
@@ -29,7 +32,9 @@ public class Main {
 		System.out.println("Sorting has ended");
 		System.out.println("Time elapsed:");
 		System.out.println(timeElapsed + " milliseconds");
+		// Printing the elements of the list
 		//printArray(numbers);
+		// Verifying if the array is sorted or not
 		//System.out.println(isSorted(numbers));	
 		
 	}
