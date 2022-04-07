@@ -22,11 +22,12 @@ public class Main {
 		// Verifying if the array is sorted or not
 		//System.out.println(isSorted(numbers));		
 		
-		long start = System.currentTimeMillis();
+		long start = System.currentTimeMillis(); // Initializing a timestamp
 		
+		// Calling the Merge Sort function
 		mergesort(numbers);	
 		
-		long finish = System.currentTimeMillis();
+		long finish = System.currentTimeMillis(); // Ending a timestamp
 		long timeElapsed = finish - start;
 		
 		System.out.println("Sorting has ended");
