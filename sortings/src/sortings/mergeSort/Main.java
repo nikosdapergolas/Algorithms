@@ -3,11 +3,14 @@ package sortings.mergeSort;
 import java.util.Random;
 
 public class Main {
+	
+	// Here we set the size of the array list that we will use
+	public static int array_size = 100000000;
 
 	public static void main(String[] args) {
 		
 		Random rand = new Random();
-		int[] numbers = new int[100000000];
+		int[] numbers = new int[array_size];
 		
 		// Initializing a very large array with random numbers 
 		for(int i = 0; i < numbers.length; i++)
