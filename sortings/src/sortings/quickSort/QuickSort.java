@@ -32,7 +32,7 @@ public class QuickSort {
 		
 		long start = System.currentTimeMillis(); // Initializing a timestamp
 		
-		// Calling the Merge Sort function
+		// Calling the Quick Sort function
 		quicksort(numbers,0,numbers.length-1);	
 		
 		long finish = System.currentTimeMillis(); // Ending a timestamp
@@ -49,27 +49,44 @@ public class QuickSort {
 
 	}
 	
+	/**
+	 * The quicksort sorting algorithm.
+	 * Complexity: O(n*log(n))
+	 */
 	private static void quicksort(int[] numbers, int p, int r)
 	{
+		// Testing if the array called has more than 1 element in it
 		if(p < r)
 		{
+			// Selecting a random element from the list to make a partition based on its value
 			int q = random_partition(numbers,p,r);
+			
+			// Recursively call the quicksort function
 			quicksort(numbers,p,q-1);
 			quicksort(numbers,q+1,r);
 		}
 	}
 	
+	/**
+	 * Randomly selecting an element from the list to make a partition based on its value.
+	 * Then, calling the partition() to actually make the partition.  
+	 * */
 	private static int random_partition(int[] numbers, int p, int r)
 	{
-		//Random rand2 = new Random();		
-		//int i = rand2.nextInt((r-p) + 1) + p;
-		
+		// Selecting a random element from the list to make a partition based on its value
 		int i = ThreadLocalRandom.current().nextInt(p, r + 1);
+		// Swapping the random element, with the first element of the list
 		swap(numbers,p,i);
 		
+		// Calling the partition function to actually make the partition
 		return partition(numbers,p,r);
 	}
 	
+	/**
+	 * Partitioning all the elements of the list from the selected
+	 * To the left, there will only be smaller numbers from it
+	 * To the right, there will only be bigger numbers from it
+	 * */
 	private static int partition(int[] numbers, int p, int q)
 	{
 		int x = numbers[p];	
@@ -94,6 +111,10 @@ public class QuickSort {
 		numbers[j] = temp;
 	}
 	
+	/**
+	 * A method that prints all the elements of an array
+	 * (Very big arrays may take a while..)
+	 * */
 	private static void printArray(int[] numbers)
 	{
 		for(int i = 0; i < numbers.length; i++)
@@ -102,7 +123,9 @@ public class QuickSort {
 		}
 	}
 	
-	// A method that tests if an array is sorted or not
+	/**
+	 * A method that tests if an array is sorted or not
+	 * */
 	private static boolean isSorted(int[] numbers)
 	{
 		int arrayLength = numbers.length;
