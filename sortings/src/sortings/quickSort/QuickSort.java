@@ -104,6 +104,9 @@ public class QuickSort {
 		return i;
 	}
 	
+	/**
+	 * Swapping 2 ellements from a given function
+	 * */
 	private static void swap(int[] numbers, int i, int j)
 	{
 		int temp = numbers[i];
