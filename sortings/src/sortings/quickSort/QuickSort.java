@@ -6,9 +6,10 @@ import java.util.concurrent.ThreadLocalRandom;
 public class QuickSort {
 	
 	// So far it is the quickest and more efficient (storage-wise) sorting algorithm i have ever coded 
+	// It took 10 minutes to sort 1000000000 elements
 	
 	// Here we set the size of the array list that we will use
-	public static int array_size = 100000000;
+	public static int array_size = 1000000000;
 
 	public static void main(String[] args) {
 		
